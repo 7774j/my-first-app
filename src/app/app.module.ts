@@ -9,6 +9,12 @@ import { SuccessAlertComponent } from './alert-assignment/success-alert/success-
 import { BasicHighlightDirective } from './directive-deep-dive-assignment/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directive-deep-dive-assignment/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './directive-deep-dive-assignment/unless.directive';
+import { GameControlComponent } from './first-game-data-binding/game-control/game-control.component';
+import { EvenComponent } from './first-game-data-binding/even/even.component';
+import { OddComponent } from './first-game-data-binding/odd/odd.component';
+import { ActiveUsersComponent } from './services-assignment/active-users/active-users.component';
+import { InactiveUsersComponent } from './services-assignment/inactive-users/inactive-users.component';
+import { CounterService } from './services-assignment/counter.service';
 
 @NgModule({
   declarations: [
@@ -19,13 +25,18 @@ import { UnlessDirective } from './directive-deep-dive-assignment/unless.directi
     SuccessAlertComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    EvenComponent,
+    OddComponent,
+    GameControlComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
     ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
